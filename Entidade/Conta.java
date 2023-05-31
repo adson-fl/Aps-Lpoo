@@ -1,24 +1,31 @@
 package Entidade;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 import TipoEnum.TipoCompra;
+
 
 public class Conta {
 	private Compra[] compras;
     private LocalDate dataVencimento;
-    private double total;
+    private Double total;
     private Cliente cliente;
+    private List<Parcela> parcelas = new ArrayList<>();  // ha aver 
 
     public Conta() {
     }
-    
-    public Conta(Cliente cliente) {
+
+
+	public Conta(Cliente cliente) {
         this.cliente = cliente;
-        this.compras = new Compra[0];
-        this.total = 0;
+        this.compras = new Compra[0];   // ohaar 
+        this.total = 0.0;
         this.dataVencimento = null;
     }
+    
+   
 
     public Compra[] getCompras() {
         return compras;
@@ -43,6 +50,14 @@ public class Conta {
     public Cliente getCliente() {
         return cliente;
     }
+    
+    public List<Parcela> getParcela() {
+		return parcelas;
+	}
+    
+    public void addparcela(Parcela parcela) { //  percorre as parcelas 
+		parcelas.add(parcela);
+	}
 
     public void adicionarCompra(Compra compra) {
         if (compra.getTipo() == TipoCompra.APRAZO) {

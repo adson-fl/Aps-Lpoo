@@ -7,8 +7,8 @@ import TipoEnum.TipoPagamento;
 public class Parcela {
 	
 	    private LocalDate dataVencto;
-	    private double valor;
-	    private float juros;
+	    private Double valor;
+	    private Float juros;
 	    private TipoPagamento tipo; // enum 
 	    private LocalDate dataPagto;
 

@@ -6,8 +6,8 @@ public class Fatura {
 
     private Conta conta;
     private LocalDate dataQuitacao;
-    private float juros;
-    private int quantidadeParcelas;
+    private Float juros;
+    private Integer quantidadeParcelas;
     private Parcela[] parcelas;
 
     public Fatura() {
