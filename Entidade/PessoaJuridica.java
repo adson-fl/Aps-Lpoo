@@ -1,6 +1,6 @@
 package Entidade;
 
-public class PessoaJuridica {
+public class PessoaJuridica extends Cliente {
 	
 	private String nome;
 	private Endereço endereço; 

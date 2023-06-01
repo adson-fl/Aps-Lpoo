@@ -1,10 +1,16 @@
 package APP;
 
+import java.util.Locale;
+import java.util.Scanner;
+
 public class Aplicação {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
+		Locale.setDefault(null);
+		Scanner sc = new Scanner (System.in);
+		
+		System.out.println("Cadastro:");
 	}
 
 }
