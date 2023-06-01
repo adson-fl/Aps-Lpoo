@@ -75,6 +75,9 @@ public class Conta {
         compras = novasCompras;
         total += compra.getTotal();
     }
+
+
+	
 }
 
 

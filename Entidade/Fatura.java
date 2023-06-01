@@ -75,4 +75,15 @@ public class Fatura {
         // Implemente o cálculo dos juros por parcelamento aqui
         return 0.0f;
     }
+
+	public void imprimir() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void parcelarFatura(int i) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

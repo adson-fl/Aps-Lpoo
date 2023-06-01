@@ -1,6 +1,6 @@
 package Entidade;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 public class PessoaFisica extends Cliente {
 	
@@ -8,13 +8,19 @@ public class PessoaFisica extends Cliente {
 	private Endereço endereço; 
 	private Double limiteDeCredito;
 	private String cpf;
-	private LocalDate dataNascimento;
+	private Date dataNascimento;
 	
 	public PessoaFisica() {
 		
 	}
 	
-	public PessoaFisica (String nome, Endereço endereço, Double limiteDeCredito, String cpf, LocalDate dataNascimento) {
+	public PessoaFisica(String nome, String cpf, Date dataNascimento) {
+		this.nome = nome;
+		this.cpf = cpf;
+		this.dataNascimento = dataNascimento;
+	}
+	
+	public PessoaFisica (String nome, Endereço endereço, Double limiteDeCredito, String cpf, Date dataNascimento) {
 		this.nome = nome;
 		this.endereço = endereço;
 		this.limiteDeCredito = limiteDeCredito;
@@ -22,6 +28,7 @@ public class PessoaFisica extends Cliente {
 		this.dataNascimento = dataNascimento;
 		
 	}
+
 
 	public String getNome() {
 		return nome;
@@ -55,11 +62,11 @@ public class PessoaFisica extends Cliente {
 		this.cpf = cpf;
 	}
 
-	public LocalDate getDataNascimento() {
+	public Date getDataNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(LocalDate dataNascimento) {
+	public void setDataNascimento(Date dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 	

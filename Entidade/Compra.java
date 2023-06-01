@@ -19,7 +19,11 @@ public class Compra {
         this.tipo = tipo;
     }
     
-    // Métodos getters e setters
+    public Compra(LocalDate of, double d, TipoCompra aprazo) {
+		// TODO Auto-generated constructor stub
+	}
+
+	// Métodos getters e setters
     public Produto[] getProdutos() {
         return produtos;
     }

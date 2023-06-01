@@ -59,4 +59,20 @@ public class Parcela {
 	    public void setDataPagto(LocalDate dataPagto) {
 	        this.dataPagto = dataPagto;
 	    }
+	    
+	    /*public float jurosPorParcelamento() {
+	        float valorFinal = (float) (getTotalFatura() * (1 + juros));
+			if (conta.getClass().getTipoPagamento() == TipoPagamento.DINHEIRO || conta.getClass().getTipoPagamento() == TipoPagamento.PIX) {
+	            return valorFinal * 0.02f;
+	        } else if (conta.getClass().getTipoPagamento() == TipoPagamento.CARTAO_DEBITO) {
+	            return valorFinal * 0.04f + valorFinal * 0.013f;
+	        } else if (conta.getClass().getTipoPagamento() == TipoPagamento.CARTAO_CREDITO) {
+	            return valorFinal * 0.06f + valorFinal * 0.018f;
+	        }
+	        return 0.0f;
+	    }
+
+		private float getTotalFatura() {
+			return 0;
+		}*/
 }
