@@ -72,7 +72,7 @@ public class PessoaFisica extends Cliente {
 	
 	// retriçãao de validade 
 	
-	public void realizarCompra(double valorTotal) {
+	public void realizarCompra(double valorTotal) { // retirado 
         if (valorTotal <= limiteDeCredito) {
             System.out.println("Compra realizada com sucesso!");
             limiteDeCredito -= valorTotal;

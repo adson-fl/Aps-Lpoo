@@ -18,16 +18,20 @@ public class Aplicação {
 		Scanner sc = new Scanner(System.in);
 		SimpleDateFormat std = new SimpleDateFormat("dd/MM/yyyy");
 		
-	
+	    
 		System.out.println("-------------------------- CADASTRO -------------------------------------------");
 		System.out.println();
-		System.out.print(" Digite (1) para pesoa fisica Digite (2) para pesssoa juridica digite: ");	
+		System.out.println(" pessoa Fisica ---------------------- (1) ");
+		System.out.println(" pessoa Juridica -------------------- (2) ");
+		System.out.println();
+		System.out.println("-------------------------------------------------------------------------------");
 		
 		int pessoa = sc.nextInt();
 		System.out.println();
 		
 		
 		if(pessoa == 1) {
+			// pessoa Fisica cad
 			System.out.println("-------------------------- PESSOA FISICA ----------------------------------");
 			System.out.println();
 			System.out.println("digite seu nome");
@@ -38,9 +42,28 @@ public class Aplicação {
 			System.out.print("digite sua data de nacimento:");
 			Date dataNascimento = std.parse(sc.next());
 			
-			PessoaFisica PF = new PessoaFisica(nome, cpf, dataNascimento);
+			double limiteDeCredito = 0;// há definir
+			
+			sc.nextLine();
+			System.out.println("Endereço ------------------------- ");
+			
+			System.out.println("Logradouro: ");
+			String logradouro = sc.nextLine();
+			System.out.println("Numero da casa");
+			String numero = sc.nextLine();
+			System.out.println("Bairro");
+			String bairro = sc.nextLine();
+			System.out.println("Municipio");
+			String municipio = sc.nextLine();
+			System.out.println("CEP");
+			String cep = sc.nextLine();
+		
+			PessoaFisica PF = new PessoaFisica(nome, new Endereço(logradouro, numero, bairro, municipio, cep), limiteDeCredito, cpf, dataNascimento);
+			
+			System.out.println("CADASTRO CONCLUIDO");
 		}
 		else {
+			// pessoa Pessoa cad
 			System.out.println("-------------------------- PESSOA JURIDICA ----------------------------------");
 			System.out.println();
 			System.out.print("digite seu nome da empresa:");
@@ -53,7 +76,23 @@ public class Aplicação {
 			System.out.print("digite seu incrição estadual:");
 			String inscricaoEstadual = sc.nextLine();
 			
-			PessoaJuridica PJ = new PessoaJuridica(nome, new Endereço(), limiteDeCredito, cnpj, inscricaoEstadual);
+			System.out.println("Endereço ------------------------- ");
+			
+			System.out.println("Logradouro: ");
+			String logradouro = sc.nextLine();
+			System.out.println("Numero da casa");
+			String numero = sc.nextLine();
+			System.out.println("Bairro");
+			String bairro = sc.nextLine();
+			System.out.println("Municipio");
+			String municipio = sc.nextLine();
+			System.out.println("CEP");
+			String cep = sc.nextLine();
+			
+			PessoaJuridica PJ = new PessoaJuridica(nome, new Endereço(logradouro, numero, bairro, municipio, cep), limiteDeCredito, cnpj, inscricaoEstadual);
+			
+			System.out.println("CADASTRO CONCLUIDO");
+	
 		}
 		
 	    }
