@@ -27,8 +27,7 @@ public class Produto {
 	public Double getPreço() {
 		return preço;
 	}
-
-	public void setPreço(Double preço) {
+	public void setpreço(double preço) {
 		this.preço = preço;
 	}
 
@@ -38,6 +37,16 @@ public class Produto {
 
 	public void setCodigoDeBarra(String codigoDeBarra) {
 		this.codigoDeBarra = codigoDeBarra;
+	}
+	
+	// valor total da soma dos produtos  // acresentar produto
+	public void totalProdut(double preço) {
+		this.preço += preço;
+		}
+	
+	// retira produto da compra // retira produto 
+	public void retiraProdut(double preço) {
+		this.preço -= preço;
 	}
 	
 }

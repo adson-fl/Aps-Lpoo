@@ -1,4 +1,4 @@
-package Entidade;
+ package Entidade;
 
 public abstract class Cliente{
 	
@@ -16,7 +16,7 @@ public abstract class Cliente{
 	        this.limiteDeCredito = limiteDeCredito;
 	    }
 
-	    // Método para realizar uma compra
+	    // Metodo para verificar limite 
 	    public void realizarCompra(double valorTotal) {
 	        if (valorTotal <= limiteDeCredito) {
 	            System.out.println("Compra realizada com sucesso!");

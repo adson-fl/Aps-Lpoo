@@ -15,6 +15,7 @@ public class Conta {
     private List<Parcela> parcelas = new ArrayList<>();  // ha aver 
 
     public Conta() {
+    	
     }
 
 

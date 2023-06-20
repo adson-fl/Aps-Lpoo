@@ -32,7 +32,7 @@ public class Aplicação {
 		
 		if(pessoa == 1) {
 			// pessoa Fisica cad
-			System.out.println("-------------------------- PESSOA FISICA ----------------------------------");
+			System.out.println("---------------------------PESSOA-FISICA-----------------------------------");
 			System.out.println();
 			System.out.println("digite seu nome");
 			String nome = sc.nextLine();
@@ -64,7 +64,7 @@ public class Aplicação {
 		}
 		else {
 			// pessoa Pessoa cad
-			System.out.println("-------------------------- PESSOA JURIDICA ----------------------------------");
+			System.out.println("---------------------------PESSOA-JURIDICA-----------------------------------");
 			System.out.println();
 			System.out.print("digite seu nome da empresa:");
 			String nome = sc.nextLine();
@@ -76,7 +76,7 @@ public class Aplicação {
 			System.out.print("digite seu incrição estadual:");
 			String inscricaoEstadual = sc.nextLine();
 			
-			System.out.println("Endereço ------------------------- ");
+			System.out.println("... Endereço ------------------------- ");
 			
 			System.out.println("Logradouro: ");
 			String logradouro = sc.nextLine();
