@@ -4,11 +4,9 @@ public class PessoaJuridica extends Cliente {
 	
 	private String nome;
 	private Endereço endereço; 
-	private Double limiteDeCredito;
+	private Double limiteDeCredito = 5000.00;
 	private String cnpj;
 	private String inscricaoEstadual;
-	
-	private Produto produto;
 	
 	public PessoaJuridica() {
 		
@@ -21,16 +19,6 @@ public class PessoaJuridica extends Cliente {
 		this.cnpj = cnpj;
 		this.inscricaoEstadual = inscricaoEstadual;
 	}
-	
-	public PessoaJuridica(String nome, Endereço endereço, Double limiteDeCredito, String cnpj,String inscricaoEstadual, Produto produto) {
-		this.nome = nome;
-		this.endereço = endereço;
-		this.limiteDeCredito = limiteDeCredito;
-		this.cnpj = cnpj;
-		this.inscricaoEstadual = inscricaoEstadual;
-		this.produto = produto;
-	}
-
 
 	public String getNome() {
 		return nome;
@@ -72,13 +60,24 @@ public class PessoaJuridica extends Cliente {
 		this.inscricaoEstadual = inscricaoEstadual;
 	}
 
-	public Produto getProduto() {
-		return produto;
+	public void validaLimit(double valorTotal) {
+		if(valorTotal <= limiteDeCredito) {
+			System.out.println("COMPRA APROVADA");
+		}
+		else {
+			System.out.println("COMPRA NEGADA LIMITE EXEDIDO");  // imcompleto ...
+		}
+		
 	}
 
-	public void setProduto(Produto produto) {
-		this.produto = produto;
-	} 
+	@Override
+	public String toString() {
+		return "nome da empresa =" + nome 
+				+ "\n endereço=" + endereço 
+				+ "\n limite DeCredito=" + limiteDeCredito
+				+ "\n cnpj=" + cnpj 
+				+ "\n inscricao Estadual=" + inscricaoEstadual; 
+	}
 	
 
 /*
@@ -92,4 +91,5 @@ public class PessoaJuridica extends Cliente {
         
 	}
 	*/
+	
 }

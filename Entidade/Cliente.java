@@ -49,7 +49,12 @@ public abstract class Cliente{
 
 	    public void setLimiteDeCredito(Double limiteDeCredito) {
 	        this.limiteDeCredito = limiteDeCredito;
-	    }	
+	    }
+
+		@Override
+		public abstract String toString();
+			
+	    
 	}
 
 

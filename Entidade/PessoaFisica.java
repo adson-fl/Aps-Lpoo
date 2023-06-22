@@ -6,9 +6,9 @@ public class PessoaFisica extends Cliente {
 	
 	private String nome;
 	private Endereço endereço; 
-	private Double limiteDeCredito;
+	private Double limiteDeCredito = 1000.00;
 	private String cpf;
-	private Date dataNascimento;
+	private Date dataNascimento; 
 	
 	public PessoaFisica() {
 		
@@ -80,5 +80,14 @@ public class PessoaFisica extends Cliente {
             System.out.println("Limite de crédito excedido. Compra não realizada.");
         }
 
+	}
+
+	@Override
+	public String toString() {
+		return "nome=" + nome 
+				+ "\n endereço=" + endereço 
+				+ "\n limiteDeCredito=" + limiteDeCredito
+				+ ", cpf=" + cpf 
+				+ ", dataNascimento=" + dataNascimento;
 	}
 }

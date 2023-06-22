@@ -11,13 +11,14 @@ public class Produto {
 	}
 	
 	public Produto(String nome, Double preço, String codigoDeBarra) {
-		this.nome = nome;
+		this.nome = nome; 
 		this.preço = preço;
 		this.codigoDeBarra = codigoDeBarra;
 	}
 
 	public String getNome() {
 		return nome;
+		
 	}
 
 	public void setNome(String nome) {
@@ -41,12 +42,13 @@ public class Produto {
 	
 	// valor total da soma dos produtos  // acresentar produto
 	public void totalProdut(double preço) {
-		this.preço += preço;
+		this.preço += preço; 
 		}
 	
 	// retira produto da compra // retira produto 
 	public void retiraProdut(double preço) {
 		this.preço -= preço;
 	}
+
 	
 }

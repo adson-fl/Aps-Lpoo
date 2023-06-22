@@ -17,7 +17,8 @@ public class Aplicação {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		SimpleDateFormat std = new SimpleDateFormat("dd/MM/yyyy");
-		
+	
+		int comando = 0; // referente ao menu
 	    
 		System.out.println("-------------------------- CADASTRO -------------------------------------------");
 		System.out.println();
@@ -41,9 +42,7 @@ public class Aplicação {
 			String cpf = sc.next();
 			System.out.print("digite sua data de nacimento:");
 			Date dataNascimento = std.parse(sc.next());
-			
-			double limiteDeCredito = 0;// há definir
-			
+			double limiteDeCredito = 1000.00;
 			sc.nextLine();
 			System.out.println("Endereço ------------------------- ");
 			
@@ -58,12 +57,12 @@ public class Aplicação {
 			System.out.println("CEP");
 			String cep = sc.nextLine();
 		
-			PessoaFisica PF = new PessoaFisica(nome, new Endereço(logradouro, numero, bairro, municipio, cep), limiteDeCredito, cpf, dataNascimento);
+			PessoaFisica CPF = new PessoaFisica(nome, new Endereço(logradouro, numero, bairro, municipio, cep), limiteDeCredito, cpf, dataNascimento);
 			
 			System.out.println("CADASTRO CONCLUIDO");
 		}
 		else {
-			// pessoa Pessoa cad
+			// pessoam juridica cad
 			System.out.println("---------------------------PESSOA-JURIDICA-----------------------------------");
 			System.out.println();
 			System.out.print("digite seu nome da empresa:");
@@ -71,7 +70,7 @@ public class Aplicação {
 			sc.nextLine();
 			System.out.print("digite seu CNPJ:");
 			String cnpj = sc.next();
-			double limiteDeCredito = 300.00;
+			double limiteDeCredito = 5000.00;
 			sc.nextLine();
 			System.out.print("digite seu incrição estadual:");
 			String inscricaoEstadual = sc.nextLine();
@@ -89,11 +88,50 @@ public class Aplicação {
 			System.out.println("CEP");
 			String cep = sc.nextLine();
 			
-			PessoaJuridica PJ = new PessoaJuridica(nome, new Endereço(logradouro, numero, bairro, municipio, cep), limiteDeCredito, cnpj, inscricaoEstadual);
+			PessoaJuridica CPJ = new PessoaJuridica(nome, new Endereço(logradouro, numero, bairro, municipio, cep), limiteDeCredito, cnpj, inscricaoEstadual);
 			
 			System.out.println("CADASTRO CONCLUIDO");
-	
-		}
+		    }
+			
+			
+			
+			while (comando != 5) {
+				
+			System.out.println("---------------------------------MENU----------------------------------------");
+			System.out.println();
+			System.out.println("cliente: digite .......................... (1)");
+			System.out.println("produto: digite .......................... (2)");
+			System.out.println("compra: digite  .......................... (3)");
+			System.out.println("opções: digite  .......................... (4)");
+			System.out.println("sair: digite    .......................... (5)");
+			System.out.println();
+			System.out.println("-----------------------------------------------------------------------------");
+			
+			comando = sc.nextInt();
+			
+			
+				
+				switch(comando) {
+				case 1:
+					if(pessoa == 1) {
+					System.out.println();
+					}
+					else {
+					System.out.println();
+					}
+					break;
+				case 2:
+					break;
+				case 3:
+					break;
+				case 4:
+					break;
+					default:
+						System.out.println("");
+						break;
+					
+				}
+			}
 		
 	    }
 	}
