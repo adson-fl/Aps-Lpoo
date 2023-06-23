@@ -15,11 +15,14 @@ public class Aplicação {
 	public static void main(String[] args) throws ParseException {
 		
 		Locale.setDefault(Locale.US);
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
-		SimpleDateFormat std = new SimpleDateFormat("dd/MM/yyyy");
-	
-		int comando = 0; // referente ao menu
-	    
+		SimpleDateFormat std = new SimpleDateFormat("dd/MM/yyyy"); // formação de data 
+		
+		PessoaFisica CPF = new PessoaFisica();
+		PessoaJuridica CPJ = new PessoaJuridica();
+		
+		
 		System.out.println("-------------------------- CADASTRO -------------------------------------------");
 		System.out.println();
 		System.out.println(" pessoa Fisica ---------------------- (1) ");
@@ -57,7 +60,7 @@ public class Aplicação {
 			System.out.println("CEP");
 			String cep = sc.nextLine();
 		
-			PessoaFisica CPF = new PessoaFisica(nome, new Endereço(logradouro, numero, bairro, municipio, cep), limiteDeCredito, cpf, dataNascimento);
+			CPF = new PessoaFisica(nome, new Endereço(logradouro, numero, bairro, municipio, cep), limiteDeCredito, cpf, dataNascimento);
 			
 			System.out.println("CADASTRO CONCLUIDO");
 		}
@@ -88,12 +91,12 @@ public class Aplicação {
 			System.out.println("CEP");
 			String cep = sc.nextLine();
 			
-			PessoaJuridica CPJ = new PessoaJuridica(nome, new Endereço(logradouro, numero, bairro, municipio, cep), limiteDeCredito, cnpj, inscricaoEstadual);
+			CPJ = new PessoaJuridica(nome, new Endereço(logradouro, numero, bairro, municipio, cep), limiteDeCredito, cnpj, inscricaoEstadual);
 			
 			System.out.println("CADASTRO CONCLUIDO");
 		    }
-			
-			
+		
+		int comando = 0; // referente ao menu
 			
 			while (comando != 5) {
 				
@@ -114,10 +117,10 @@ public class Aplicação {
 				switch(comando) {
 				case 1:
 					if(pessoa == 1) {
-					System.out.println();
+					System.out.println(CPF);
 					}
 					else {
-					System.out.println();
+					System.out.println(CPJ);
 					}
 					break;
 				case 2:

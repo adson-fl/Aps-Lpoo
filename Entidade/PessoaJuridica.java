@@ -72,11 +72,11 @@ public class PessoaJuridica extends Cliente {
 
 	@Override
 	public String toString() {
-		return "nome da empresa =" + nome 
-				+ "\n endereço=" + endereço 
-				+ "\n limite DeCredito=" + limiteDeCredito
-				+ "\n cnpj=" + cnpj 
-				+ "\n inscricao Estadual=" + inscricaoEstadual; 
+		   return "NOME DA EMPRESA: " + nome 
+				+ "\n ENDEREÇO: " + endereço 
+				+ "\n LIMITE DE CREDITO: " + limiteDeCredito
+				+ "\n CNPJ: " + cnpj 
+				+ "\n INCRIÇÃO ESTADUAL: " + inscricaoEstadual; 
 	}
 	
 

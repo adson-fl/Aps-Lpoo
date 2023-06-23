@@ -14,12 +14,6 @@ public class PessoaFisica extends Cliente {
 		
 	}
 	
-	public PessoaFisica(String nome, String cpf, Date dataNascimento) {
-		this.nome = nome;
-		this.cpf = cpf;
-		this.dataNascimento = dataNascimento;
-	}
-	
 	public PessoaFisica (String nome, Endereço endereço, Double limiteDeCredito, String cpf, Date dataNascimento) {
 		this.nome = nome;
 		this.endereço = endereço;
@@ -84,10 +78,10 @@ public class PessoaFisica extends Cliente {
 
 	@Override
 	public String toString() {
-		return "nome=" + nome 
-				+ "\n endereço=" + endereço 
-				+ "\n limiteDeCredito=" + limiteDeCredito
-				+ ", cpf=" + cpf 
-				+ ", dataNascimento=" + dataNascimento;
+		 return "NOME: " + nome 
+				+ "\n ENDEREÇO: " + endereço 
+				+ "\n LIMITE DE CREDITO: " + limiteDeCredito
+				+ "\n CPF: " + cpf 
+				+ "\n DATA DE NACIMETO: " + dataNascimento;
 	}
 }
